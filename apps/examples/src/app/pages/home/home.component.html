@@ -1,0 +1,47 @@
+<h1>RXJS</h1>
+<mat-card>
+  <button mat-raised-button (click)="one$.next('one')">one</button>
+  <button mat-icon-button (click)="one$.complete()">
+    <mat-icon>check_circle</mat-icon>
+  </button>
+  <button mat-icon-button (click)="one$.error('error one')">
+    <mat-icon>error</mat-icon>
+  </button>
+</mat-card>
+
+<mat-card>
+  <button mat-raised-button (click)="two$.next('two')">two</button>
+  <button mat-icon-button (click)="two$.complete()">
+    <mat-icon>check_circle</mat-icon>
+  </button>
+  <button mat-icon-button (click)="two$.error('error two')">
+    <mat-icon>error</mat-icon>
+  </button>
+</mat-card>
+<mat-card>
+  <button mat-raised-button (click)="three$.next('three')">three</button>
+  <button mat-icon-button (click)="three$.complete()">
+    <mat-icon>check_circle</mat-icon>
+  </button>
+  <button mat-icon-button (click)="three$.error('error three')">
+    <mat-icon>error</mat-icon>
+  </button>
+</mat-card>
+<div class="pre-container">
+  <h1>ForkJoin</h1>
+  <p>All observables will have to emit one</p>
+  <p>All observables must complete</p>
+  <p>forkJoin emits array of last values.</p>
+  <pre>{{ forkJoin$ | async }}</pre>
+</div>
+<div class="pre-container">
+  <h1>Concat</h1>
+  <p>Concat will subscribe to next observable when previous is completed.</p>
+  <pre>{{ concat$ | async }}</pre>
+</div>
+
+<div class="pre-container">
+  <h1>Merge</h1>
+  <p>Merge will subscribe to all observables in input-array.</p>
+  <pre>{{ merge$ | async }}</pre>
+</div>

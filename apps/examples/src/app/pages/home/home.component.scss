@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+mat-card {
+  width: 200px;
+  display: inline;
+  margin-right: 10px;
+  button {
+    margin-right: 5px;
+  }
+}
+.pre-container {
+  margin-top: 15px;
+  border: 1px solid gray;
+  padding: 10px;
+}

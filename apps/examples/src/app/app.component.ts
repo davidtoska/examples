@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ROUTES } from './constants';
 
 @Component({
   selector: 'examples-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'examples';
+  menuItems = Object.values(ROUTES);
 }
