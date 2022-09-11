@@ -1,0 +1,131 @@
+:host {
+  display: block;
+  height: 100%;
+  padding: 20px;
+  background: #c5bdbd;
+  position: relative;
+}
+
+.component-container {
+  position: relative;
+  background: red;
+  height: 200px;
+  width: 800px;
+  display: block;
+  z-index: 200;
+}
+.row-span-1 {
+  height: 8.33%;
+  position: relative;
+}
+.row-span-2 {
+  height: 16.66%;
+  position: relative;
+}
+.row-span-3 {
+  height: 25%;
+  position: relative;
+}
+.row-span-4 {
+  height: 33.33%;
+  position: relative;
+}
+.row-span-5 {
+  height: 41.66%;
+  position: relative;
+}
+.row-span-6 {
+  height: 50%;
+  position: relative;
+}
+.row-span-7 {
+  height: 58.33%;
+  position: relative;
+}
+.row-span-8 {
+  height: 66.66%;
+  position: relative;
+}
+.row-span-9 {
+  height: 75%;
+  position: relative;
+}
+.row-span-10 {
+  height: 83.33%;
+  position: relative;
+}
+.row-span-11 {
+  height: 91.66%;
+  position: relative;
+}
+.row-span-12 {
+  height: 100%;
+  position: relative;
+}
+
+.row-container {
+  display: block;
+  height: 600px;
+  border: 1px solid black;
+}
+.abs-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #eaeaea;
+  margin: 20px 0px;
+}
+
+.parent {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  background: #aaa;
+  transform: translate(50%, 50%);
+}
+.abs-gray {
+  position: absolute;
+  background: #aaaaaa;
+}
+
+.div-child {
+  background: #aaa;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  right: 25%;
+}
+.p-child {
+  background: #aaa;
+  position: absolute;
+  //width: 50%;
+  top: 25%;
+  right: 25%;
+}
+
+.child {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  background: red;
+  transform: translate(0%, 0%);
+}
+
+// GRID OVERLAY
+.abs-container {
+  position: relative;
+}
+.abs-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: radial-gradient(circle at 1px 1px, #000 2px, transparent 0);
+  background-size: 49.5px 49.5px;
+}

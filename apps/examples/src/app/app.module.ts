@@ -15,14 +15,27 @@ import { ObjectComponent } from './pages/object/object.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { ROUTES } from './constants';
+import { GridComponent } from './pages/grid/grid.component';
+import { AbsolutePositioningComponent } from './pages/absolute-positioning/absolute-positioning.component';
+import { AbsComponentComponent } from './components/abs-component/abs-component.component';
 
 const routes: Route[] = [
   { path: ROUTES.rxjs, component: HomeComponent },
   { path: ROUTES.object, component: ObjectComponent },
-  { path: '**', redirectTo: 'home' },
+  { path: ROUTES.grid, component: GridComponent },
+  { path: ROUTES.absolutePositioning, component: AbsolutePositioningComponent },
+  { path: '**', redirectTo: ROUTES.grid },
 ];
 @NgModule({
-  declarations: [AppComponent, ShellComponent, ObjectComponent, HomeComponent],
+  declarations: [
+    AppComponent,
+    ShellComponent,
+    ObjectComponent,
+    HomeComponent,
+    GridComponent,
+    AbsolutePositioningComponent,
+    AbsComponentComponent,
+  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
